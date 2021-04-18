@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'longest_word/styles.css' %}">
+        <title>Hello</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Current score is</h1>
+            <div class="reset-wrapper">
+                <a href="">Reset Score</a>
+            </div>
+            <div class="letter-wrapper">
+                {% for letter in letters %}
+                <div class="letter">{{ letter }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+</html>
